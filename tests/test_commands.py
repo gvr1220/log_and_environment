@@ -41,7 +41,7 @@ def test_multiply_command(capfd):
     captured = capfd.readouterr()  # Capture the printed output
     assert captured.out.strip() == "Executing multiplication command"
 
-def test_app_exit(monkeypatch):
+def test_app_exit(capfd, monkeypatch):
     """Test that the app exits properly."""
     inputs = iter(['exit'])  # Simulate user entering 'exit'
     monkeypatch.setattr('builtins.input', lambda _: next(inputs))
@@ -51,7 +51,7 @@ def test_app_exit(monkeypatch):
         app.start()
     assert str(e.value) == "Exiting...", "The app did not exit as expected"
 
-def test_app_menu_command(monkeypatch):
+def test_app_menu_command(capfd, monkeypatch):
     """Test that the app menu command works."""
     # Simulate user entering 'menu' followed by 'exit'
     inputs = iter(['menu', 'exit'])
