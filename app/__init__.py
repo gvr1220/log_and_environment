@@ -1,10 +1,10 @@
 from app.commands import CommandHandler
-from app.plugin.add import AddCommand
-from app.plugin.divide import DivideCommand
-from app.plugin.multiply import MultiplyCommand
-from app.plugin.subtract import SubtractCommand
-from app.plugin.menu import MenuCommand
-from app.plugin.exit import ExitCommand
+from app.plugins.add import AddCommand
+from app.plugins.divide import DivideCommand
+from app.plugins.multiply import MultiplyCommand
+from app.plugins.subtract import SubtractCommand
+from app.plugins.menu import MenuCommand
+from app.plugins.exit import ExitCommand
 
 
 class App:
