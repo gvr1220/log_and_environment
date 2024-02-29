@@ -8,4 +8,4 @@ class MenuCommand(Command):
         print("1. add")
         print("2. subtract")
         print("3. multiply")
-        print("3. divide")
+        print("4. divide")
