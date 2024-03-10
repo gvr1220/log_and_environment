@@ -1,5 +1,6 @@
-from app.commands import Command
+from app.commands.operation_command import OperationCommand
+from calculator.operations import add
 
-class AddCommand(Command):
-    def execute(self):
-        print("Executing addition command")
+class AddCommand(OperationCommand):
+    def __init__(self):
+        super().__init__(add)

@@ -4,6 +4,7 @@ from app.commands import CommandHandler
 from app.commands import Command
 from app.plugins.menu import MenuCommand
 
+
 class App:
     def __init__(self):
         self.command_handler = CommandHandler()

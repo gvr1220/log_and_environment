@@ -1,5 +1,6 @@
-from app.commands import Command
+from app.commands.operation_command import OperationCommand
+from calculator.operations import divide
 
-class DivideCommand(Command):
-    def execute(self):
-        print("Executing division command")
+class DivideCommand(OperationCommand):
+    def __init__(self):
+        super().__init__(divide)
